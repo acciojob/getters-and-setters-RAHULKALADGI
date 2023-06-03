@@ -6,11 +6,11 @@ class Person {
     this.name = name;
     this.age = age;
   }
-  getname() {
-    return this.name;
+  get name() {
+    return this._name;
   }
-  setage(newAge) {
-     this.age = newAge;
+  set age(newAge) {
+     this._age = newAge;
   }
 }
 class Student extends Person {
