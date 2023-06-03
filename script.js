@@ -9,27 +9,27 @@ class Person {
   get name() {
     return this.name;
   }
-  set() {
-    return this.age;
+  set changeAge(newAge) {
+     this.age = newAge;
   }
 }
-const person = new Person("John",30);
-
 class Student extends Person {
+  constructor(name,age) {
+    super(name,age);
+  }
   study() {
-    console.log(`${name} is studying`);
+    console.log(this.name + " is studying");
   }
 }
-const student = new Student("John",30);
-const student = new Student("Alice", 30);
-
 class Teacher extends Person {
+  constructor(name,age) {
+    super(name,age);
+  }
   teach() {
-    console.log(`${name} is teaching`);
+    console.log(this.name + " is teaching");
   }
 }
-const teacher = new Teacher("John", 30);
-const teacher = new Teacher("Alice", 30);
+
 
 // Do not change the code below this line
 window.Person = Person;
